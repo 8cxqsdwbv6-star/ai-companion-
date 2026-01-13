@@ -15,7 +15,7 @@ function signup(){ alert('Demo signup successful'); document.getElementById('mod
 
 function launchModule(module){
   document.getElementById('output').innerText = module + ' module is launching...';
-  fetch('/api/run_module', {
+  fetch('https://ai-companion-m7od.onrender.com/api/run_module', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify({module: module, user_input: 'example'})
